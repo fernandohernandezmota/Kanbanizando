@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62.5%; /* fonte 10px */
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: aqua;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+#app {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    width: 100%;
+    min-height: 100vh;
+}
+
+main {
+    padding-top: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main .inner {
+    height: 100%;
+    background-color: white;
+    border-top-left-radius: 4rem;
+    border-radius: 4rem;
+    padding: 4.8rem 3.2rem;
+    overflow-y: auto;
+}
+
+nav {
+    padding: 3.2rem 2.7rem 0 3.5rem;
+    background-color: aqua;
+}
+
+ul {
+    margin-top: 6rem;
+    list-style: none;
+    display: grid;
+    gap: 3.6rem;
+    min-width: 11.5rem;
+}
+
+li a {
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    font-weight: 500;
+}
+
+a.active,
+a:hover {
+    color: black;
+    font-weight: 700;
+}
+
+a ion-icon {
+    font-size: 3rem;
+}
+
+section.title-avatar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 2.4rem;
+}
+
+.title-avatar img {
+    width: 6.4rem;
+    height: 6.4rem;
+    border-radius: 50%;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 3.2rem;
+    color: #403937;
+}
+
+/* Section Filter */
+
+section.filter {
+    margin-top: 3.2rem;
+    padding: 0 2.4rem;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.filter button {
+    padding: 1.2rem 3.2rem;
+    border: 0;
+    background: aqua;
+    text-color: black;
+    font-weight: bold;
+    border-radius: .5rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.filter button span {
+    text-shadow: .0rem .4rem 1.6rem rgba(22, 22, 22, 0.1);
+    font-size: 1.4rem;
+}
+
+.filter button ion-icon {
+    font-size: 2.4rem;
+}
+
+div .input-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #FFFFFF;
+    border: 0.07rem solid #E3E3E3;
+    width: 100%;
+    border-radius: 0.6rem;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #FFFFFF;
+    border: 0.07rem solid #E3E3E3;
+    box-shadow: .0rem .4rem 1.6rem rgba(22, 22, 22, 0.1);
+    flex 1;
+}
+
+.input-wrapper ion-icon {
+    font-size: 2.4rem;
+    color: #505059;    
+}
+
+.input-wrapper input {
+    border: 0;
+    width: 100%;
+    outline: 0;
+}
+
+.input-wrapper:has(:focus) {
+    border: 0;
+    width: 100%;
+    outline: .2rem black solid;
+}
+
+.input-wrapper input::placeholder {
+    font-size: 1.6rem;
+    color: #7C7C8A;
+}
+
+/* Section Kanban */
+section.kanban {
+    display: flex;
+    gap: 4.8rem;
+    padding: 3.2rem;
+    overflow-x: auto;
+    background-color: white;
+}
+
+.column {
+    flex: 1;
+    background: #f0f0f0;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: white;
+}
+
+.column h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    cursor: grab;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.card p {
+    font-size: 1.4rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.card .tags {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.card .tags span {
+    background: aqua;
+    color: black;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.4rem;
+    font-weight: 500;
+    width: 100px
+}
+
+/* Dragging Styles */
+.card:active {
+    cursor: grabbing;
+    opacity: 0.8;
+}
